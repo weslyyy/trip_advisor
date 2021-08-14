@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:trip_advisor/models/info.dart';
 import 'package:trip_advisor/style.dart';
 

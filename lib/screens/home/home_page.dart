@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:trip_advisor/models/info.dart';
 import 'package:trip_advisor/screens/home/widgets/details.dart';
 import 'package:trip_advisor/screens/home/widgets/local.dart';
+import 'package:trip_advisor/screens/home/widgets/photos.dart';
 
 class HomePage extends StatelessWidget {
   final info = Info(
@@ -15,12 +16,15 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Image.asset(info.photo),
-          Local(info),
-          Details(info),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Image.asset(info.photo),
+            Local(info),
+            Details(info),
+            Photos(),
+          ],
+        ),
       ),
     );
   }
